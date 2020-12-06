@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="dist/css/main.css" />
+    <title>Video player</title>
+  </head>
+  <body>
+    <video playsinline muted poster="medias/image/white.jpg" id="bgvid" src="medias/video/confetti_white.mp4"></video>
+    <div class="container">
+      <p class="title">BEST VIDEO PLAYER EVER</p>
+      <video src="medias/video/video_montage.mp4" class="video" ></video>
+      <div class="progression">
+          <div class="progress-container">
+              <div class="progress"></div>
+          </div>
+            <input id="vol-control" type="range" value="100" min="0" max="100"
+            step="1" oninput="SetVolume(this.value)" onchange="SetVolume(this.value)""/>
+      </div>
+      <div class="buttons">
+          <button class="play">Play</button>
+          <button class="pause">Pause</button>
+          <button class="stop">Stop</button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
